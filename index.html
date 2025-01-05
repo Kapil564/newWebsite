@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: lightblue;
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header h1 a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      header h4 a {
+        color: #0073e6;
+        text-decoration: none;
+        font-size: 0.5rem;
+      }
+      header img.menu {
+        width: 20px;
+        cursor: pointer;
+      }
+      .category:focus{
+        outline:none;
+        border:none;
+      }
+      .country:focus{
+        outline:none;
+      }
+      .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .search-bar input[type="text"] {
+        border: 1px solid #ccc;
+        padding:5px;
+        border-right:none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        font-size: 1rem;
+        width: 250px;
+        transition: all 0.3s ease;
+      }
+      .search-bar input[type="text"]:focus {
+        outline: none;
+        border-right:none;
+      }
+      .search-bar button  {
+        background-color:white;
+        padding:5px;
+        border: 1px solid #ccc;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-left:none;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        header h1 {
+          margin-bottom: 10px;
+        }
+        .search-bar {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .search-bar input[type="text"] {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <div class="flex space-x-4">
+          <img src="./menu.png" alt="_target" class="menu h-3 mt-3" />
+          <h1><a href="./index.html">Newsly</a></h1>
+        </div>
+        <div class="flex space-x-4">
+          <h4>
+            <a href="./SignIn.html" alt="_target" class="SignIn">Sign In</a>
+          </h4>
+          <h4><a href="./SignUp.html" class="SignUp">Sign Up</a></h4>
+        </div>
+      </header>
+    <div class="flex px-6  place-content-evenly" style="border-bottom:2px solid black">
+        <div class="  flex justify-center  py-6 ">
+            <select class=" category border rounded-md">
+            <option value="All">select Category</option>
+            <option value="Agriculture">Agriculture, Farming & Rural</option>
+            <option value="AI-Related">AI-related</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Arts">Arts</option>
+            <option value="Aviation">Aviation</option>
+            <option value="Banking">Banking</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Breaking News Story">Breaking News Story</option>
+            <option value="Business">Business</option>
+            <option value="Crypto">Crypto</option>
+            <option value="Defence">Defence</option>
+            <option value="Education & Training">Education & Training</option>
+            <option value="Energy">Energy</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Foreign Affairs & Trade">
+                Foreign affairs & trade
+            </option>
+            <option value="Games & Gaming">Games & Gaming</option>
+            <option value="Information Technology (IT)">
+                Information Technology (IT)
+            </option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Local News & Stories">Local News & Stories</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Medical">Medical</option>
+            <option value="Personal Finance">Personal Finance</option>
+            <option value="Religion">Religion</option>
+            <option value="Science">Science</option>
+            <option value="Spiritual">Spiritual</option>
+            <option value="Tech">Tech</option>
+            <option value="Transport">Transport</option>
+            <option value="Travel & Tourism">Travel & Tourism</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Youth">Youth</option>
+            </select>
+        </div>
+        <div class="  flex justify-center w-64 py-6 " >
+            <select class=" country  w-64 border p-2 rounded-md">
+            <option value="All">Select Country</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="brazil">brazil</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Canada">Canada</option>
+            <option value="Chile">Chile</option>
+            <option value="china">China</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Egypt">Egypt</option>
+            <option value="France">France</option>
+            <option value="Finland">Finland</option>
+            <option value="Germany">Germany</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Iran">Iran</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="NorthKorea">NorthKorea</option>
+            <option value="SouthKorea">SouthKorea</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Russia">Russia</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Singapore">Singapore</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Spain">Spain</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="us">United States</option>
+            <option value="uae">United Arab Emirates</option>
+            <option value="uk">United Kingdom</option>
+            <option value="Yemen">Yemen</option>
+            </select>
+        </div>
+        <div class="search-bar flex mb-5">
+            <input type="text" placeholder="Search..." /> <button class="button">Search</button>
+          </div>
+    </div>
+     
+      <div class="NewsDiv"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
