@@ -32,7 +32,6 @@ async function fetchNews(endpoint, params = {}) {
     }
 }
 
-
 function renderNews(articles, container) {
     if (!articles || !container) return;
 
