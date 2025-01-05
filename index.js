@@ -62,8 +62,8 @@ function renderNews(articles, container) {
 async function loadInitialNews() {
     try {
 
-        const worldNews = await fetchNews('everything', {
-            q: 'world',
+        const worldNews = await fetchNews('top-headlines', {
+            country:'us',
             pageSize: 8,
             language: 'en'
         });
