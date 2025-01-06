@@ -1,5 +1,5 @@
 
-const API_KEY = '38a4ca0222b547c6baed0675d2bbf059';
+const API_KEY = '44000056582142fea0a363f78c89cd23';
 const BASE_URL = 'https://newsapi.org/v2';
 
 
